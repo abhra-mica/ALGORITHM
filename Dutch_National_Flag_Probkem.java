@@ -1,6 +1,6 @@
 /*Segregate 0'1, 1's and 2's from an array
  */
-public class Dutch_National_Flag_Probkem {
+public class Dutch_National_Flag_Problem {
 
 	public static void main(String[] args) {
 		int[] arr = { 0, 1, 1, 0, 1, 2, 1, 2, 0, 0, 0, 1,2 };
