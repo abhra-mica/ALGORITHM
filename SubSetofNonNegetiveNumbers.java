@@ -7,7 +7,6 @@ public class SubSetofNonNegetiveNumbers {
 		int sum = 23;
 
 		for (int i = 1; i < arr.length; i++) {
-
 			while (curr_sum > sum && start <= i) {
 				curr_sum = curr_sum - arr[start];
 				start++;
@@ -17,8 +16,8 @@ public class SubSetofNonNegetiveNumbers {
 				System.out.println(" Subset present between " + start + " to "
 						+ (i - 1));
 			}
-
 			curr_sum = curr_sum + arr[i];
+			
 			// Below while loop is provided when the last element has reached
 			// then we reduce the start position one by one until it will reach
 			// end until current sum >sum
@@ -30,8 +29,6 @@ public class SubSetofNonNegetiveNumbers {
 							+ " to " + i);
 				}
 			}
-
 		}
-
 	}
 }
