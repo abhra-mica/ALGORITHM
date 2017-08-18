@@ -6,11 +6,12 @@ public class RotatedSortedArray {
 		System.out.println(arrayRotated(arr));
 	}
 
-	static int arrayRotated(int[] arr) {
+	public static int arrayRotated(int[] arr) {
 		int low = 0;
 		int high = arr.length - 1;
 
 		while (low < high) {
+			//It will possible when the array between low and high is sorted
 			if (arr[low] < arr[high]) {
 				return low;
 			}
