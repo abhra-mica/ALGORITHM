@@ -1,12 +1,11 @@
 public class SearchElementInSortedMatrix {
-
 	public static void main(String[] args) {
 		int[][] matrix = { { 10, 20, 30, 40 }, { 12, 22, 33, 45 },
 				{ 14, 24, 44, 47 }, { 16, 26, 46, 50 } };
 		System.out.println(searchElement(matrix, 24));
 	}
 
-	static String searchElement(int[][] matrix, int element) {
+	public static String searchElement(int[][] matrix, int element) {
 		int i = 0;
 		int j = matrix[0].length - 1;
 
