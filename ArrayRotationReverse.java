@@ -9,11 +9,12 @@ public class ArrayRotationReverse {
 	}
 
 	public static void rotateArray(int[] arr, int rotation) {
-		reverseArr(arr, 0, arr.length - 1 - rotation);
-		reverseArr(arr, arr.length - rotation, arr.length - 1);
-		reverseArr(arr, 0, arr.length - 1);
+		reverseArr(arr, 0, arr.length - 1 - rotation);           // Reverse 0 to (array length - rotation) array portion
+		reverseArr(arr, arr.length - rotation, arr.length - 1);  // Reverse rotation array portion
+		reverseArr(arr, 0, arr.length - 1);                      // Reverse whole array
 	}
 
+	//Helper method to reverse array with given start and end index
 	public static void reverseArr(int[] arr, int start, int end) {
 		while (start < end) {
 			int temp = arr[start];
