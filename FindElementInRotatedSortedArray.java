@@ -1,13 +1,10 @@
 public class FindElementInRotatedSortedArray {
 	public static void main(String[] args) {
-
 		int[] arr = { 14, 12, 11, 10, 2, 3, 4, 6, 8, 9 };
-		
 		System.out.println(findELement(arr, 6));
-		
 	}
 
-	static int findELement(int[] arr, int element) {
+	public static int findELement(int[] arr, int element) {
 		int low = 0;
 		int high = arr.length - 1;
 
