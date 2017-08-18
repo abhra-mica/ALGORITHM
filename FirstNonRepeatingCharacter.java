@@ -12,11 +12,11 @@ import java.util.Set;
  * */
 public class FirstNonRepeatingCharacter {
 	public static void main(String[] args) {
-		String s = "geeks for geeks";
+		String s = "abhra kar";
 		System.out.println(firstChar(s));
 	}
 
-	static char firstChar(String s) {
+	public static char firstChar(String s) {
 		ArrayList<Character> list = new ArrayList<>();
 		Set<Character> set = new HashSet<>();
 
@@ -28,6 +28,6 @@ public class FirstNonRepeatingCharacter {
 				list.remove((Character) s.charAt(i)); // Here without specifically type casting remove(int i) is invoking									 
 			}
 		}
-		return list.get(1);
+		return list.get(0);
 	}
 }
