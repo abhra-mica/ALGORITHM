@@ -8,24 +8,31 @@ public class SubArrayWithSumZero {
 
 		// This Map holds sum as key and and it's index
 		Map<Integer, Integer> sum_hashtable = new HashMap<>();
-		int sum = arr[0];
-		sum_hashtable.put(sum, 0);
+		int sum = 0;
 
-		// This map is for holding sub array length as key and start and end
-		// index as value
-		Map<Integer, String> zeroSumMap = new HashMap<>();
-
-		for (int i = 1; i < arr.length; i++) {
+		int maxLength = 0;
+		int start = 0;
+		int end = 0;
+		for (int i = 0; i < arr.length; i++) {
 			sum = sum + arr[i];
-
 			if (sum_hashtable.containsKey(sum)) {
-				int startIndex = sum_hashtable.get(sum);
-				zeroSumMap.put(i - startIndex - 1, "Start index= " +( startIndex
-						+ 1 )+ " End Index= " + i);
+				int length = i - sum_hashtable.get(sum);
+				if (maxLength < length) {
+					maxLength = length;
+					start = sum_hashtable.get(sum);
+					end = i;
+				}
+			} else {
+				sum_hashtable.put(sum, i);
 			}
-			sum_hashtable.put(sum, i);
 		}
 
-		System.out.println(zeroSumMap);
+		System.out
+				.println("Max Length of Subarray Forming zero - " + maxLength);
+		for (int i = start + 1; i <= end; i++) {
+			System.out.print(arr[i] + " ");
+		}
+
+		// System.out.println(zeroSumMap);
 	}
 }
