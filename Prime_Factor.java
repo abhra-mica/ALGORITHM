@@ -1,19 +1,28 @@
-import java.util.Scanner;
-public class Prime_Factor {
-	public static void main(String[] args) {
-		int pr[] = { 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53 };
-
-		System.out.println("Enter the Number: ");
-		Scanner sc = new Scanner(System.in);
-		long num = sc.nextLong();
-		int count = 0;
-		long x = pr[0];
-		for (int i = 1; i < pr.length; i++) {
-			if (x > num)
-				break;
-			count++;
-			x = x * pr[i];
+public class PrimeNumbers {
+		public static void main(String[] args) {
+		int n = 514;
+		primeFactors(n);
+	}
+	public static void primeFactors(int n) {
+		// Numbers of 2s printed
+		while (n % 2 == 0) {
+			System.out.print(2 + " ");
+			n /= 2;
 		}
-		System.out.println(count);
+
+		// This portion comes when factors will be odd only
+		for (int i = 3; i <= Math.sqrt(n); i += 2) {
+			// This code snippet to check for the numbers of same odd prime
+			// numbers
+			while (n % i == 0) {
+				System.out.print(i + " ");
+				n /= i;
+			}
+		}
+
+		// After all this will check for the rest prime number which is greated
+		// than 2 because at this moment prime number can't be 1
+		if (n > 2)
+			System.out.print(n);
 	}
 }
