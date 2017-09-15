@@ -5,7 +5,6 @@ public class MinEleFromStack {
 	private static Stack<Integer> support = new Stack<>();
 
 	public static void main(String[] args) {
-
 		push(50);
 		push(40);
 		push(35);
