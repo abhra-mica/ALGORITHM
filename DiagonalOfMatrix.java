@@ -21,7 +21,7 @@ public class DiagonalOfMatrix {
 			}
 			System.out.println();
 		}
-		// Print Diagonals started from last column
+		// Print Diagonals started from last row
 		for (int l = 1; l < col; l++) {
 			int i = row - 1;
 			int j = l;
