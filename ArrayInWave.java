@@ -1,3 +1,4 @@
+/* Arrange array in such a way that every > and < elements occurs alternatively */
 public class ArrayInWave {
 	public static void main(String[] args) {
 
