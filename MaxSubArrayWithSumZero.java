@@ -1,7 +1,7 @@
 import java.util.HashMap;
 import java.util.Map;
 
-public class SubArrayWithSumZero {
+public class MaxSubArrayWithSumZero {
 	public static void main(String[] args) {
 
 		int[] arr = { 15, -2, 2, -8, 1, 7, 10, 23 };
