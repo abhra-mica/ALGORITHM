@@ -13,7 +13,7 @@ import java.util.Set;
 public class FirstNonRepeatingCharacter {
 	public static void main(String[] args) {
 		String s = "abhra kar";
-		System.out.println(firstChar(s));
+		System.out.println(firstChar(s.toLowerCase()));
 	}
 
 	public static char firstChar(String s) {
