@@ -1,4 +1,4 @@
-public class PrimeNumbers {
+public class PrimeFactorsOfAGivenNumber {
 		public static void main(String[] args) {
 		int n = 514;
 		primeFactors(n);
